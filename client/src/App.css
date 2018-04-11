@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.err {
+  color: indianred;
+  margin-bottom: .5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card {
+  border-radius: 0px;
+  border-width: 0 0 1px 0;
+}
+
+.card p {
+  color: #9095aa;
+}
+
+.btn-primary {
+  background-color: #6379f6;
+}
+
+.heading {
+  color: #777982;
+  margin: 2em auto;
+}
+
+.dormant-link, .dormant-link:hover {
+  color: dimgrey;
+  text-decoration: none;
+}
+
+
+.form-group label {
+  color: grey;
+  margin-bottom: .4em;
+  font-size: .8em;
+}
+.form-control {
+  border-width: 0 0 2px 0;
+  border-color: lightgrey;
+  border-radius: 0px;
+  outline: 0px;
+}
+
+select.form-control {
+  border-width: 1px;
+  border-radius: 4px;
+}
+
+textarea.form-control {
+  height: 100px;
+}
+
+form .text-muted {
+  font-size: .8em;
+}
+
+.btn-pager {
+  background: white;
+  border: 1px solid lightgrey;
+  font-size: 1.8em;
+  padding: 0.3em 0;
+  color: grey;
+}
+
+.btn-pager:hover {
+  color: #007bff;
+  border-color: #007bff;
+}
