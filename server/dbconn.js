@@ -1,9 +1,9 @@
 const connectionString = {
-  database: "library",
+  database: "postgres",
   port: 5432,
-  host: "localhost",
+  host: "db",
   user: "postgres",
-  password: "toor"
+  password: "example"
 };
 
 module.exports = connectionString;

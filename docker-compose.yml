@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - ./db/dbexport.pgsql:/docker-entrypoint-initdb.d/seed.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: postgres
+
+  gqlserver:
+    image: brinz/gqlserver
+    ports: 
+      - 4000:4000
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://postgres:example@db:5432/practicedocker
+      - PORT=3000
+  
+  

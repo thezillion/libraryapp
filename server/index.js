@@ -18,6 +18,8 @@ app.use('/graphql', cors(), expressGraphQL({
 
 app.use("/api", api);
 
+app.use(express.static('build'));
+
 app.listen(4000, () => {
    console.log('Listening...')
 })
