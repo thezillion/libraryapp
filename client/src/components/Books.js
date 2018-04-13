@@ -123,7 +123,9 @@ class Books extends Component {
                     onChange={this.handleChange.bind(this, "bookAuthor")}
                   >
                     {this.props.authors.map((author, i) => (
-                      <option value={author.id} key={i}>{author.name}</option>
+                      <option value={author.id} key={i}>
+                        {author.name}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -140,12 +142,18 @@ class Books extends Component {
               </form>
             </ModalBody>
             <ModalFooter>
-              <Button color="primary" onClick={this.addNewBook.bind(this)}>
-                Save Book
-              </Button>{" "}
-              <Button color="secondary" onClick={this.toggle.bind(this)}>
-                Cancel
-              </Button>
+              <div className="row" style={{width: "100%", margin: 0}}>
+                <div className="col-lg-6">
+                  <Button color="secondary" block={true} onClick={this.toggle.bind(this)}>
+                    Cancel
+                  </Button>
+                </div>
+                <div className="col-lg-6">
+                  <Button color="primary" block={true} onClick={this.addNewBook.bind(this)}>
+                    Save Book
+                  </Button>
+                </div>
+              </div>
             </ModalFooter>
           </Modal>
         </div>

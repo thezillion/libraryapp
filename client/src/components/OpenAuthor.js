@@ -7,6 +7,7 @@ import BookCard from "./BookCard";
 class OpenAuthor extends Component {
   constructor(props) {
     super(props);
+    if (this.props.authorsCount == 0) this.props.loadData();
     this.state = {
       author: {}
     };

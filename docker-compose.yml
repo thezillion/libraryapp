@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres:example@db:5432/practicedocker
+      - LIBRARY_PRODUCTION=true
       - PORT=3000
   
   

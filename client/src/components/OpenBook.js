@@ -6,6 +6,7 @@ import axios from "axios";
 class OpenBook extends Component {
   constructor(props) {
     super(props);
+    if (this.props.booksCount == 0) this.props.loadData();
     this.state = {
       book: {}
     };
@@ -104,9 +105,9 @@ class OpenBook extends Component {
 
 class NextPrevBookBtn extends Component {
   render() {
-    if (this.props.BooksCount === 0) return <p className="text-muted">Loading...</p>;
+    if (this.props.booksCount === 0) return <p className="text-muted">Loading...</p>;
     else {
-      const BookId = this.props.match.params.bookId || 10;
+      const BookId = this.props.match.params.bookId;
       var prevBookId = parseInt(BookId, 10)-1;
       var nextBookId = parseInt(BookId, 10)+1;
       prevBookId = prevBookId<1?this.props.booksCount:prevBookId;

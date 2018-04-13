@@ -150,12 +150,26 @@ class Authors extends Component {
               </form>
             </ModalBody>
             <ModalFooter>
-              <Button color="primary" onClick={this.addNewAuthor.bind(this)}>
-                Save Author
-              </Button>{" "}
-              <Button color="secondary" onClick={this.toggle.bind(this)}>
-                Cancel
-              </Button>
+              <div className="row" style={{ width: "100%", margin: 0 }}>
+                <div className="col-lg-6">
+                  <Button
+                    color="secondary"
+                    block={true}
+                    onClick={this.toggle.bind(this)}
+                  >
+                    Cancel
+                  </Button>
+                </div>
+                <div className="col-lg-6">
+                  <Button
+                    color="primary"
+                    block={true}
+                    onClick={this.addNewAuthor.bind(this)}
+                  >
+                    Save Author
+                  </Button>
+                </div>
+              </div>
             </ModalFooter>
           </Modal>
         </div>
